@@ -1,6 +1,7 @@
 = changelog
 
 == 0 - 2026-01-01
+- tweak release make target
 - add release make target
 - add changelog
 - update readme

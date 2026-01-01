@@ -20,7 +20,7 @@ true bin/true: true.asm
 	nasm -f bin true.asm -o /dev/stdout | install -Dm755 /dev/stdin bin/true
 
 clean:
-	rm -rf bin
+	rm -rf bin tinaries-*.tar*
 
 install:
 	install -vDm755 bin/* -t $(DESTDIR)$(BINDIR)/
@@ -28,5 +28,5 @@ install:
 release: .git
 	git tag $(VERSION)
 	git archive -o tinaries-$(VERSION).tar --prefix=tinaries-$(VERSION)/ $(VERSION)
-	xz -k9 tinaries-$(VERSION).tar
-	gzip -k9 tinaries-$(VERSION).tar
+	xz -fk9 tinaries-$(VERSION).tar
+	gzip -fk9 tinaries-$(VERSION).tar
