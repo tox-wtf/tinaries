@@ -1,3 +1,4 @@
+VERSION := 0
 PREFIX := /usr
 BINDIR := $(PREFIX)/bin
 
@@ -23,3 +24,9 @@ clean:
 
 install:
 	install -vDm755 bin/* -t $(DESTDIR)$(BINDIR)/
+
+release: .git
+	git tag $(VERSION)
+	git archive -o tinaries-$(VERSION).tar --prefix=tinaries-$(VERSION)/ $(VERSION)
+	xz -k9 tinaries-$(VERSION).tar
+	gzip -k9 tinaries-$(VERSION).tar

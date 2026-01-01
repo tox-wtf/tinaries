@@ -1,6 +1,7 @@
 = changelog
 
 == 0 - 2026-01-01
+- add release make target
 - add changelog
 - update readme
 - update makefile
