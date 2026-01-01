@@ -1,7 +1,5 @@
 ; clear.asm (x86_64) - the cutest possible(?) implementation of clear
 ;
-; SPDX-License-Identifier: 0BSD
-;
 ; assemble using:
 ;   nasm -f bin clear.asm -o /dev/stdout | install -vm755 /dev/stdin clear
 ;

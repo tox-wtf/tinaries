@@ -1,7 +1,5 @@
 ; true.asm (x86_64) - the cutest possible(?) implementation of true
 ;
-; SPDX-License-Identifier: 0BSD
-;
 ; assemble using:
 ;   nasm -f bin true.asm -o /dev/stdout | install -vm755 /dev/stdin true
 ;
