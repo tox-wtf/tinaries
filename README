@@ -1,3 +1,23 @@
 = tinaries
 
-tiny binaries
+== tiny binaries
+a collection of trivial programs with minimal elf headers written in x86_64
+assembly
+
+== building
+`make` will build all programs
+
+`make $program` will build that program
+
+`make install` will install all built programs or fail if none are built
+
+destdir installs are supported
+
+== licensing
+these are licensed under the following unsimplified spdx expression:
+```spdx
+(0BSD OR (WTFPL)) OR GLWTPL
+```
+
+== thanks
+https://nathanotterness.com/2021/10/tiny_elf_modernized.html
